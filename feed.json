@@ -1,0 +1,30 @@
+[
+  {
+		"title": "Business", 
+		"link": "http://news.yahoo.com/rss/business"
+	},
+	{
+		"title": "Earnings",
+		"link": "http://news.yahoo.com/rss/earnings"
+	},
+	{	
+		"title": "Politics", 
+		"link": "http://news.yahoo.com/rss/politics"
+	},
+	{
+		"title": "Stock Markets", 
+		"link": "http://news.yahoo.com/rss/stock-markets"
+	},
+	{
+		"title": "Economy", 
+		"link": "http://news.yahoo.com/rss/economy"
+	},
+	{
+		"title": "Market Place", 
+		"link": "http://news.yahoo.com/rss/marketplace"
+	},
+	{
+		"title": "Taxes", 
+		"link": "http://news.yahoo.com/rss/taxes"
+	}
+]
