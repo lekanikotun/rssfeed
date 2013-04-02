@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">  
+  <title>RSS Feed</title>
+  <meta name="format-detection" content="telephone-no">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, target-densitydpi=device-dpi">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/swiper.css">
+</head>
+<body>
+  <div id="container">
+  <header>			
+		<div id="upper">
+			<div id="ffilter"></div>
+			<div id="refresh"></div>
+			<div id="configure"></div>
+			<div id="favelist"></div>
+			<div id="faveblock">
+				<div id="headfave">Favorite Feeds</div>
+				<div id="favebody"></div>
+			</div>
+		</div>
+	</header>		
+	<!--! end of #container -->
+    <div id="main">
+	<!--	<div id="rssselect"></div> -->
+		<h2 id="rsstitle1"></h2>
+		<div class="rssblock">		
+		</div>
+		<div class="rsspageblock">
+			<div class="clearfix">
+				<div class="backto back">&nbsp;</div>
+				<div class="rsspagesocial">
+					<div class="favorite">&nbsp;</div>
+					<div class="facebook">&nbsp;</div>
+					<div class="twitter">&nbsp;</div>
+					<div class="share">&nbsp;</div>
+				</div>
+			</div>
+		</div>			
+	</div>
+	<!-- start backdrop -->
+	<div id="backdrop"></div>
+	<!-- end backdrop -->
+
+	<!-- start share/email block-->
+		<div id="shareblock">
+			<div id="contactform">
+				<form id="form1">
+					<div id = "formblock">
+						<h2>Email</h2>
+						<input id="yemail" type="text" value="" name="yemail" placeholder="Your Email" />
+						<input id="rcvemail" type="text" value="" name="email" placeholder="Receiver's Email" />
+						<input id="subject" type="text" value="News From Friend" name="subject" disabled />
+						<textarea id="message" cols="10" name="message" rows="6" style="width: 300px"></textarea>
+						<input type="submit" value="Submit" name="submit1" />
+						<input type="button" id="cancelemail" value="Cancel" name="cancel" />
+					</div>
+				</form>
+			</div>
+			<div id="fblock">
+				<h2>Post to Facebook</h2>				
+			</div>
+			<div id="twblock">
+				<h2>Share on Twitter</h2>				
+			</div>
+			<div class="message"></div>
+			<div class="post btn-disabled">Post</div>
+			<div class="cancel btn-cancel">Cancel</div>			
+		</div>
+		<!-- end share/email block -->
+		
+		<!-- start error block -->
+		<div id="errorblock">No internet connection</div>
+		<!-- end error block -->
+	</div> 	
+	<script src="js/jquery-1.8.3.min.js"></script>  
+  	<script defer src="js/swiper-1.8.min.js"></script>
+  	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.cycle/2.9999.8/jquery.cycle.all.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
