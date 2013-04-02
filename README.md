@@ -1,7 +1,8 @@
 rssfeed
 =======
 
-RSS Feed for Mobile (iPad)
+RSS Feed for Mobile (Developed originally for iPad)
+Single page application
 
 View live demo at http://mediaintellects.com/demo/rssfeed/index.html
 
