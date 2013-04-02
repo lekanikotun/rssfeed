@@ -3,4 +3,6 @@ rssfeed
 
 RSS Feed for Mobile (iPad)
 
-View demo at http://mediaintellects.com/demo/rssfeed/index.html
+View live demo at http://mediaintellects.com/demo/rssfeed/index.html
+
+Best viewed on an iPad (1024x768)
