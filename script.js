@@ -3,9 +3,21 @@
  */
 
 var rssfeedlink, rssfeedimg, rssfeedtitle, feedId, faceBlock, nooffeed= 10;
-//var faveArray = [];
+
+$.searchObj = function(faveRSSObj, linkval) {
+	var faveArr = JSON.parse(faveRSSObj);
+	var tempArray = faveArr.filter(function(fval) {return fval.link == linkval});
+	//if link does not exist in array
+	if (tempArray.length === 0) {
+		//return faveArr;
+		return true;
+	} else {  //if link exists in array
+		return false;
+	}
+}
+
 function closeConfigureRSS() {
-  $('#backdrop').fadeOut(200, function() {
+	$('#backdrop').fadeOut(200, function() {
 		$('#backdropcontainer').animate({'opacity':'0'}, 200, 'linear');
 	});
 	$('#backdropcontainer').remove();
@@ -86,7 +98,7 @@ function dispFaveRSS(title, link, image) {
 }
 
 function fetchRSS(heading, url) {
-	jQuery.ajax({
+	$.ajax({
 		url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num='+nooffeed+'&callback=?&q='+encodeURIComponent(url),
 		dataType: 'json',
 		timeout: 1500,
@@ -138,21 +150,9 @@ function displayRSS(id) {
 		$('.rsspageblock').css('z-index','1001');
 		$('.rsspageblock').animate({'margin-right':'0'}, 200, 'linear');
 		$('#'+id).css({"z-index":"2000",'display':'block'});
-		var favebgd = searchFaveArr(storedRSS, rssfeedlink) ? "favorite.png" : "favorite-selected.png";	
+		var favebgd = $.searchObj(storedRSS, rssfeedlink) ? "favorite.png" : "favorite-selected.png";	
 		$('.favorite').css('background','url(img/icons/'+favebgd+') bottom left no-repeat');
 	});
-}
-
-function searchFaveArr(faveRSSObj, linkval) {
-	var faveArr = JSON.parse(faveRSSObj);
-	var tempArray = faveArr.filter(function(fval) {return fval.link == linkval});
-	//if link does not exist in array
-	if (tempArray.length === 0) {
-		//return faveArr;
-		return true;
-	} else {  //if link exists in array
-		return false;
-	}
 }
 
 $(document).ready(function() {
