@@ -155,7 +155,7 @@ function displayRSS(id) {
 	});
 }
 
-$(document).ready(function() {
+(function($) {
 	var origFaveVal = localStorage.getItem('faveRSS');
 	if ( origFaveVal == null || origFaveVal == "undefined") {
 		var emptyArr = [];
@@ -287,4 +287,4 @@ $(document).ready(function() {
 			loadFaveRSS();
 		}
 	});
-});
+})(jQuery);
